@@ -11,6 +11,7 @@
 ```
 aws configure
 ```
+
     - Type in your access keys, choose Default region name: **us-west-2**, and Default output format: json 
     - [How to find available GameLift regions](https://aws.amazon.com/gamelift/faq/). **us-west-2** is based in Oregon.
 
@@ -38,6 +39,7 @@ Engine\Extras\Redist\en-us\UE4PrereqSetup_x64.exe /q
 ```
 aws gamelift upload-build --name GameLiftTutorial --build-version 1.0.0 --build-root $(FILE_PATH_TO_SERVER_FILES) --operating-system WINDOWS_2012 --region $(REGION_NAME)
 ```
+
     - Operating system is based on the build of the packaged Unreal Engine game, ex. Windows above.
     - $(REGION_NAME) - I have been using **us-west-2**
 
