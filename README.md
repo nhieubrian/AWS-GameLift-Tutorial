@@ -7,8 +7,7 @@ I would highly suggest watching our tutorials on youtube before jumping straight
 
 - [How To Make A Multiplayer Game With Unreal Engine and Amazon GameLift](https://www.youtube.com/watch?v=tOy0xYaP3wA&list=PLa1dM5bPQv0u2IWZRIxtRqwWVJNOUtlbF)
 
-## Credits to:
+## Credits to Flopperam:
 
-(https://www.youtube.com/watch?v=tOy0xYaP3wA&list=PLa1dM5bPQv0u2IWZRIxtRqwWVJNOUtlbF)
+[Link to Tutorial](https://www.youtube.com/watch?v=tOy0xYaP3wA&list=PLa1dM5bPQv0u2IWZRIxtRqwWVJNOUtlbF)
 
-[![Youtube](https://img.shields.io/badge/Flopperam--red.svg?style=social&logo=youtube)](https://www.youtube.com/channel/UCO77KLKwplncMHLo6gLpIHw)
