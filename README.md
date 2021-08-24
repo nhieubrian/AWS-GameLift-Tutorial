@@ -1,11 +1,24 @@
-# GameLift Example in UE4 [![License](https://img.shields.io/github/license/chris-gong/gamelift-example-ue4.svg)](https://github.com/chris-gong/gamelift-example-ue4/blob/master/LICENSE)
+# AWS GameLift with Unreal Engine
 
-## About
-This repository is an example project that implements the basic features of AWS GameLift in Unreal Engine.
+## Installation:
 
-I would highly suggest watching our tutorials on youtube before jumping straight in so that you have a better understanding of GameLift.
+- [How to install Unreal Engine Source](https://docs.unrealengine.com/4.27/en-US/ProgrammingAndScripting/ProgrammingWithCPP/DownloadingSourceCode/)
+    - Associate your GitHub account to your Unreal Account (IMPORTANT)
+    - Be sure to use the correct version of Visual Studios
 
-- [How To Make A Multiplayer Game With Unreal Engine and Amazon GameLift](https://www.youtube.com/watch?v=tOy0xYaP3wA&list=PLa1dM5bPQv0u2IWZRIxtRqwWVJNOUtlbF)
+## Start Up:
+
+- Right click the GameLiftTutorial.uproject and generate the Visual Studios project.
+- Select Development Editor, Win64 and build the project.
+- This time select Development Server, Win64 and build again.
+- Launch the GameLiftTutorial.uproject (or rebuild the development editor)
+- On the top left, File -> Package Project -> Build Target -> GameLiftTutorial
+- Then package the project, File -> Package Project -> Win64 (can choose any build, just specify when uploading to AWS)
+
+## Uploading to AWS
+
+
+
 
 ## Credits to Flopperam:
 
