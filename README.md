@@ -8,10 +8,9 @@
     - Be sure to use the correct version of Visual Studios
 - [How to install AWS CLI](https://aws.amazon.com/cli/)
     - [Find your access keys](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html)
-```
-aws configure
-```
-
+    ```
+    aws configure
+    ```
     - Type in your access keys, choose Default region name: **us-west-2**, and Default output format: json 
     - [How to find available GameLift regions](https://aws.amazon.com/gamelift/faq/). **us-west-2** is based in Oregon.
 
