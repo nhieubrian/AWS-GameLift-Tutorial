@@ -11,8 +11,8 @@
     ```
     aws configure
     ```
-    - Type in your access keys, choose Default region name: **us-west-2**, and Default output format: json 
-    - [How to find available GameLift regions](https://aws.amazon.com/gamelift/faq/). **us-west-2** is based in Oregon.
+    - Type in your access keys, choose Default region name: $(REGION_NAME), and Default output format: json 
+    - [How to find available GameLift regions](https://aws.amazon.com/gamelift/faq/). I will be using, **us-west-2**, which is based in Oregon.
 
 ## Start Up:
 * Guide to begin accessing the Test Project: *
@@ -35,9 +35,9 @@ VC_redist.x64.exe /q
 Engine\Extras\Redist\en-us\UE4PrereqSetup_x64.exe /q
 ```
 - Open a terminal and use this command. 
-```
-aws gamelift upload-build --name GameLiftTutorial --build-version 1.0.0 --build-root $(FILE_PATH_TO_SERVER_FILES) --operating-system WINDOWS_2012 --region $(REGION_NAME)
-```
+    ```
+    aws gamelift upload-build --name GameLiftTutorial --build-version 1.0.0 --build-root $(FILE_PATH_TO_SERVER_FILES) --operating-system WINDOWS_2012 --region $(REGION_NAME)
+    ```
 
     - Operating system is based on the build of the packaged Unreal Engine game, ex. Windows above.
     - $(REGION_NAME) - I have been using **us-west-2**
