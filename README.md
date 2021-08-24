@@ -3,7 +3,7 @@
 ## Installation:
 
 - [How to install Unreal Engine Source](https://docs.unrealengine.com/4.27/en-US/ProgrammingAndScripting/ProgrammingWithCPP/DownloadingSourceCode/)
-    - *Troubleshooting*
+    - **Troubleshooting:**
     - Associate your GitHub account to your Unreal Account (IMPORTANT)
     - Be sure to use the correct version of Visual Studios
 
