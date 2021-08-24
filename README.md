@@ -42,6 +42,10 @@
     - Operating system is based on the build of the packaged Unreal Engine game, ex. Windows above.
     - $(REGION_NAME) - I have been using **us-west-2**
 
+## Creating the Fleet, Queue and Matchmaking
+
+- Navigate to the AWS GameLift dashboard
+- ![Image](./images/f41b229155b81a81f7dc381b59560d0a.png)
 
 
 ## Credits to Flopperam:
