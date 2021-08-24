@@ -23,10 +23,10 @@
 - [Download VC_Redist (Choose the installation version, x64)](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0)
 - Navigate to WindowsServer inside the game folder, drag and drop the installation executable into the folder.
 - Create a install.bat file inside the folder
-'''
+```
 VC_redist.x64.exe /q
 Engine\Extras\Redist\en-us\UE4PrereqSetup_x64.exe /q
-'''
+```
 - 
 
 
