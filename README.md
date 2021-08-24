@@ -46,8 +46,7 @@
 
 - Navigate to the AWS GameLift dashboard
 ![Image](./images/f41b229155b81a81f7dc381b59560d0a.png)
-- You will see that your packaged server is on AWS, now we will create a Fleet
-    ** Fleet Build: **
+- You will see that your packaged server is on AWS, but now we need to create the **Fleet:**
     - Name: $(NAME)
     - Fleet Type: Choose $(ON-DEMAND) for reserved resources for your server, or $(SPOT) for leftover resources (This is Cheaper!)
     - Build: $(GameLiftTutorial 1.00 ...)
