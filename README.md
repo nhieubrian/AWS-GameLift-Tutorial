@@ -8,6 +8,7 @@
     - Be sure to use the correct version of Visual Studios
 
 ## Start Up:
+    *Guide to begin accessing the Test Project*
 
 - Right click the GameLiftTutorial.uproject and generate the Visual Studios project.
 - Select Development Editor, Win64 and build the project.
