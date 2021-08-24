@@ -47,16 +47,16 @@
 - Navigate to the AWS GameLift dashboard
 ![Image](./images/f41b229155b81a81f7dc381b59560d0a.png)
 - You will see that your packaged server is on AWS, but now we need to create the **Fleet:**
-    - Name: $(NAME)
-    - Fleet Type: Choose $(ON-DEMAND) for reserved resources for your server, or $(SPOT) for leftover resources (This is Cheaper!)
-    - Build: $(GameLiftTutorial 1.00 ...)
-    - Home Region: Ensure that this region is the same as what you used to upload earlier
+    - **Name:** $(NAME)
+    - **Fleet Type:** Choose $(ON-DEMAND) for reserved resources for your server, or $(SPOT) for leftover resources (This is Cheaper!)
+    - **Build:** $(GameLiftTutorial 1.00 ...)
+    - **Home Region:** Ensure that this region is the same as what you used to upload earlier
     - *Leave everything else as default*
-    - Launch Path: \game\GameLiftTutorial\Binaries\Win64\GameLiftTutorialServer.exe
+    - **Launch Path:** \game\GameLiftTutorial\Binaries\Win64\GameLiftTutorialServer.exe
         - Parameters: -port=7777
         - Concurrent Processes: 1
         - ** Don't forget the green check mark! **
-    - EC2 Port Range: 7777
+    - **EC2 Port Range:** 7777
         - Protocol: UDP
         - IP Address: 0.0.0.0/0
     - Click Submit! This will take a couple of minutes to create.
