@@ -25,7 +25,7 @@
 - Then package the project, File -> Package Project -> Win64 (can choose any build, just specify when uploading to AWS)
 
 ## Uploading to AWS:
-* Packaging the game files to AWS and allowing AWS to launch a light-weight EC2 desktop with the server executable *
+*Packaging the game files to AWS and allowing AWS to launch a light-weight EC2 desktop with the server executable*
 
 - [Download VC_Redist x64](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0)
     - This allows the EC2 instance to run Visual Studio Code!
