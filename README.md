@@ -15,7 +15,7 @@
     - [How to find available GameLift regions](https://aws.amazon.com/gamelift/faq/). I will be using, **us-west-2**, which is based in Oregon.
 
 ## Start Up:
-* Guide to begin accessing the Test Project: *
+*Guide to begin accessing the Test Project:*
 
 - Right click the GameLiftTutorial.uproject and generate the Visual Studios project.
 - Select Development Editor, Win64 and build the project.
