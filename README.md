@@ -76,7 +76,104 @@
         - Rule set name: (Select the rule set created above).
     - Click Create!
 
-## 
+## Creating Lambda Functions:
+*Here we will create 11 different functions that we will connect together into a new API.*
+
+- InvalidateTokens (GET) *
+- GetSignInResult (GET)
+- RetrieveNewTokens (POST) *
+- ValidateDuplicateEmail 
+- StartMatchmaking (POST) *
+- PollMatchmaking (POST) *
+- TrackEvents
+- StopMatchmaking (POST) *
+- InitializePlayerData 
+- ExchangeCodeForTokens (POST)
+- GetPlayerData (POST) *
+
+**All of the code for these functions will be in the "lambda" folder of this repo**
+
+In these functions, you will find sections where you will need to input the identification from the next sections.
+
+## Setting up your Cognito User Pool:
+*This is how we track users and enable the Google Sign In**
+
+- Navigate: Manage User Pools -> Create User Pool -> $(NAME) -> Review Defaults -> Create Pool
+- Add an App Client 
+    - MAKE SURE TO UNCHECK "GENERATE CLIENT SECRET" <- If left checked, your lamdba functions will return "invalid client"
+- On the side bar, click on App Client 
+    - This is your **Client Id** that you will replace in your lambda code
+
+## Let's skip over to API Gateways:
+*This is creating our API call! We will need the lambda functions to complete our Cognito User Pool.
+
+Note: We are only connecting 8/11 functions created above in our API.
+
+- Create API -> Rest API -> Default settings
+- Actions -> Create Resource -> $(NAME_OF_LAMBDA_FUNCTION) -> Create Resource
+- Click on the resource created -> Actions -> Create Method -> $(GET/POST) -> Check "Use Lambda Proxy integration" -> $(REGION) -> $(NAME_OF_LAMBDA_FUNCTION)
+    - In the section, Creating Lambda Functions, you will find which functions will need $(GET/POST)
+- Complete the next 7 functions following the same steps!
+
+- Action -> Deploy API 
+- Navigate to Stages on the left sidebar 
+
+## Back to Cognito User Pool:
+
+- Click on the "get" of the "GetSignInResult" and copy the "InvokeURL"
+    - For example, mine is: https://6oit029inf.execute-api.us-west-2.amazonaws.com/test/getsigninresult
+- Navigating back to Cognito User Pool -> App Client Settings
+- Check Select All -> Paste the InvokeURL into the CallbackURLs
+- Check Authorization Code Grant -> Check all available scopes -> Save
+- Navigate to "Domain Name" -> Create a Domain
+- Back to App Client Settings
+    - There should now be a Hosted UI that is availabe to click
+    - ![Image]()
+- Navigate to Resource Servers 
+    - Create a new resource, whatever you named as the identifier is what you'll see on your App Client Settings
+    - Add a scope! I named mine "access" and "gdsfwe"
+- Check the resource created above inside the App Client Setting
+
+## Enabling Google Sign-on:
+
+- [How to set up] (https://developers.google.com/identity/sign-in/web/sign-in)
+    - Calling from "Web Browser/Application"
+    - Authorized Javascript Origin: $(https://arnoctest.auth.us-west-2.amazoncognito.com)
+        - This is found through the Domain Name section inside Cognito
+    - Authorized redirect URL: $(https://arnoctest.auth.us-west-2.amazoncognito.com/oauth2/idpresponse)
+        - We just added oauth2/idpresponse at the end of the Domain Name!
+    - **IMPORTANT: DON'T LOSE THESE CLIENT ID/SECRET**
+    - Navigate to Cognito User Pool -> Identity Providers -> Select Google -> Paste your Client ID and Secret ID
+        - Scope: profile email openid
+    - Navigate to Attribute Mapping
+        - Select Google
+        - Check Email, in the drop down, Select Email and Save
+
+Note: You can check if this works by clicking on Hosted UI from App Client Setting. You should see an option for Google Sign In!
+
+## Finishing up Cognito User Pool:
+
+- Navigate to Triggers 
+    - Pre Sign Up -> Select ValidateDuplicateEmail
+    - Post Sign Up -> Select InitializePlayerData
+- Navigate back to API Gateways
+- Create an Authorizer
+    - Select Cognito
+    - $(NAME_OF_USER_POOL)
+    - Token Source: 'Authorization'
+- ON ALL OF THE FUNCTIONS WITH A '*', you will need to complete the following
+    - Select GET/POST -> Method Request
+        - Authorization: $(NAME_OF_AUTHORIZER) 
+        - OAuth Scope: $(NAME_OF_API_FROM_COGNITO)
+            - Ex. arnoc.api/access
+
+## Optional Logs:
+
+- 
+
+
+
+
 
 
 
