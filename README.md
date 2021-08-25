@@ -29,6 +29,7 @@
 
 - [Download VC_Redist x64](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0)
     - This allows the EC2 instance to run Visual Studio Code!
+    
 - Navigate to WindowsServer inside the game folder, drag and drop the installation executable into the folder.
 - Create a install.bat file inside the folder and add these commands
     ```
