@@ -55,12 +55,26 @@
     - **Launch Path:** \game\GameLiftTutorial\Binaries\Win64\GameLiftTutorialServer.exe
         - Parameters: -port=7777
         - Concurrent Processes: 1
-        - ** Don't forget the green check mark! **
+        - Don't forget the green check mark!
     - **EC2 Port Range:** 7777
         - Protocol: UDP
         - IP Address: 0.0.0.0/0
     - Click Submit! This will take a couple of minutes to create.
--     
+- Creating the **Queue:**
+    - Choose any name
+    - Down at the bottom, click add destination
+    - Select the region, Fleet, and the name of the Fleet we just created.
+- Creating the **Matchmaking:**
+    - Navigate to "Create matchmaking rule set"
+    - [Use the first example for rule set](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-examples.html)
+    - Click Validate, then Create.
+    - Navigate to "Create matchmaking configuration"
+        - Choose any name, leave everything as default
+        - Request timeout: (Any number of seconds preffered, I had 60)
+        - Rule set name: (Select the rule set created above).
+    - Click Create!
+
+## 
 
 
 
