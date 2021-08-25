@@ -7,7 +7,7 @@
     - Associate your GitHub account to your Unreal Account (IMPORTANT)
     - Be sure to use the correct version of Visual Studios
 - [How to install AWS CLI](https://aws.amazon.com/cli/)
-    - [Find your access keys](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html)
+    - [Find your access keys](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html). Open command prompt and use:
     ```
     aws configure
     ```
@@ -24,7 +24,7 @@
 - On the top left, File -> Package Project -> Build Target -> GameLiftTutorial
 - Then package the project, File -> Package Project -> Win64 (can choose any build, just specify when uploading to AWS)
 
-## Uploading to AWS
+## Uploading to AWS:
 * Packaging the game files to AWS and allowing AWS to launch a light-weight EC2 desktop with the server executable *
 
 - [Download VC_Redist (Choose the installation version, x64)](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0)
@@ -42,7 +42,7 @@
     - Operating system is based on the build of the packaged Unreal Engine game, ex. Windows above.
     - $(REGION_NAME) - I have been using **us-west-2**
 
-## Creating the Fleet, Queue and Matchmaking
+## Creating the Fleet, Queue and Matchmaking:
 
 - Navigate to the AWS GameLift dashboard
 ![Image](./images/f41b229155b81a81f7dc381b59560d0a.png)
