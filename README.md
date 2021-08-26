@@ -117,7 +117,7 @@ In these functions, you will find sections where you will need to input the iden
     - This is your **Client Id** that you will replace in your lambda code
 
 ## Let's skip over to API Gateways:
-*This is creating our API call! We will need the lambda functions to complete our Cognito User Pool.
+*This is creating our API call! We will need the lambda functions to complete our Cognito User Pool.*
 
 Note: We are only connecting 8/11 functions created above in our API.
 
