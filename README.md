@@ -79,20 +79,21 @@
 ## Creating Lambda Functions:
 *Here we will create 11 different functions that we will connect together into a new API.*
 
-- InvalidateTokens (GET) *
+- InvalidateTokens (GET)* -L
 - GetSignInResult (GET)
-- RetrieveNewTokens (POST) *
-- ValidateDuplicateEmail 
-- StartMatchmaking (POST) *
-- PollMatchmaking (POST) *
-- TrackEvents
-- StopMatchmaking (POST) *
-- InitializePlayerData 
+- RetrieveNewTokens (POST)* -L
+- ValidateDuplicateEmail -L
+- StartMatchmaking (POST)* -L
+- PollMatchmaking (POST)* -L
+- TrackEvents -L
+- StopMatchmaking (POST)* -L 
+- InitializePlayerData -L
 - ExchangeCodeForTokens (POST)
-- GetPlayerData (POST) *
+- GetPlayerData (POST)* -L
 
 **All of the code for these functions will be in the "lambda" folder of this repo**
 
+Note: '-L' represents the need to create a layer before creating the function. 
 In these functions, you will find sections where you will need to input the identification from the next sections.
 
 ## Setting up your Cognito User Pool:
@@ -167,10 +168,25 @@ Note: You can check if this works by clicking on Hosted UI from App Client Setti
         - OAuth Scope: $(NAME_OF_API_FROM_COGNITO)
             - Ex. arnoc.api/access
 
-## Optional Logs:
+## Setting Up Additional Tables:
+*Setting up DynamoDB and Amazon SNS*
 
-- 
+- Create 2 tables, "MatchmakingTickets" and "Players" with the Partition Key: Id (String)
+    - For MatchmakingTickets, enable TTL
+    - Note: Use these exact name, unless you want to change all instances in the Lambda Functions
 
+- Set up defaults of Simple Notification Service (SNS)
+
+## Done!
+
+- Be sure to go back into your lamdba functions and 'edit' the necessary functions!
+- (Optional): Setting up CloudWatch for extra logs!
+- (Postman): A quick way to test your lambda functions/API calls
+- Note: You'll need to launch 2 instances at once for the matchmaking to work!
+
+## Roadmap of the connection:
+
+![Roadmap]()
 
 
 
