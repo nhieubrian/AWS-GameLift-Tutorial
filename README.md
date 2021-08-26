@@ -198,5 +198,5 @@ Note: You can check if this works by clicking on Hosted UI from App Client Setti
 
 [Link to Flopperam's Tutorial Playlist](https://www.youtube.com/watch?v=tOy0xYaP3wA&list=PLa1dM5bPQv0u2IWZRIxtRqwWVJNOUtlbF)
 
-    - This is tutorial is more linear, meaning you are creating the entire project from scratch. Rather than continuing from the finished build in  this repo.
+    - This tutorial is more linear, meaning you are creating the entire project from scratch. Rather than continuing from the finished build in this repo.
 
