@@ -187,7 +187,7 @@ Note: You can check if this works by clicking on Hosted UI from App Client Setti
 
 ## Roadmap of the connection:
 
-![Roadmap](./images/d83e46d2f8b0e36ee6b16a44582ccade.png)
+![Roadmap](./images/d83e46d2f8b0e36ee6b16a44582ccade.png?style=centerme)
 
 
 
