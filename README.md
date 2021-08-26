@@ -130,7 +130,7 @@ Note: We are only connecting 8/11 functions created above in our API.
 - Navigate to "Domain Name" -> Create a Domain
 - Back to App Client Settings
     - There should now be a Hosted UI that is availabe to click
-    - ![Image]()
+    - ![Image](./images/f722313cac8aba284e60cb9489a0a25d.png)
 - Navigate to Resource Servers 
     - Create a new resource, whatever you named as the identifier is what you'll see on your App Client Settings
     - Add a scope! I named mine "access" and "gdsfwe"
@@ -187,7 +187,7 @@ Note: You can check if this works by clicking on Hosted UI from App Client Setti
 
 ## Roadmap of the connection:
 
-![Roadmap]()
+![Roadmap](./images/d83e46d2f8b0e36ee6b16a44582ccade.png)
 
 
 
