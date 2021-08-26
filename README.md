@@ -1,5 +1,11 @@
 # AWS GameLift with Unreal Engine
 
+## Credits to Flopperam:
+
+[Link to Flopperam's Tutorial Playlist](https://www.youtube.com/watch?v=tOy0xYaP3wA&list=PLa1dM5bPQv0u2IWZRIxtRqwWVJNOUtlbF)
+
+This tutorial is more linear, meaning you are creating the entire project from scratch. Rather than continuing from the finished build in this repo.
+
 ## Installation:
 
 - [How to install Unreal Engine Source](https://docs.unrealengine.com/4.27/en-US/ProgrammingAndScripting/ProgrammingWithCPP/DownloadingSourceCode/)
@@ -188,17 +194,4 @@ Note: You can check if this works by clicking on Hosted UI from App Client Setti
 ## Roadmap of the connection:
 
 ![Roadmap](./images/d83e46d2f8b0e36ee6b16a44582ccade.png?style=centerme)
-
-<p align="center">
-  <img width="460" height="300" src="./images/d83e46d2f8b0e36ee6b16a44582ccade.png">
-</p>
-
-
-
-
-## Credits to Flopperam:
-
-[Link to Flopperam's Tutorial Playlist](https://www.youtube.com/watch?v=tOy0xYaP3wA&list=PLa1dM5bPQv0u2IWZRIxtRqwWVJNOUtlbF)
-
-This tutorial is more linear, meaning you are creating the entire project from scratch. Rather than continuing from the finished build in this repo.
 
