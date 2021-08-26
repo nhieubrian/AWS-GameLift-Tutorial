@@ -24,7 +24,7 @@ This tutorial is more linear, meaning you are creating the entire project from s
     - Type in your access keys, choose Default region name: $(REGION_NAME), and Default output format: json 
     - [How to find available GameLift regions](https://aws.amazon.com/gamelift/faq/). I will be using, **us-west-2**, which is based in Oregon.
 
-## Start Up:
+## Start up:
 *Guide to begin accessing the Test Project:*
 
 - Right click the GameLiftTutorial.uproject and generate the Visual Studios project.
@@ -54,7 +54,7 @@ This tutorial is more linear, meaning you are creating the entire project from s
     - Operating system is based on the build of the packaged Unreal Engine game, ex. Windows above.
     - $(REGION_NAME) - I have been using **us-west-2**
 
-## Creating the Fleet, Queue and Matchmaking:
+## Creating the fleet, queue and matchmaking:
 
 - Navigate to the AWS GameLift dashboard
 ![Image](./images/f41b229155b81a81f7dc381b59560d0a.png)
@@ -86,7 +86,7 @@ This tutorial is more linear, meaning you are creating the entire project from s
         - Rule set name: (Select the rule set created above).
     - Click Create!
 
-## Creating Lambda Functions:
+## Creating lambda functions:
 *Here we will create 11 different functions that we will connect together into a new API.*
 
 - **InvalidateTokens** (GET)* -L
@@ -107,7 +107,7 @@ Note: '-L' represents the need to create a layer before creating the function.
 
 In these functions, you will find sections where you will need to input the identification from the next sections.
 
-## Setting up your Cognito User Pool:
+## Setting up your Cognito user pool:
 *This is how we track users and enable the Google Sign In*
 
 - Navigate: Manage User Pools -> Create User Pool -> $(NAME) -> Review Defaults -> Create Pool
@@ -130,7 +130,7 @@ Note: We are only connecting 8/11 functions created above in our API.
 - Action -> Deploy API 
 - Navigate to Stages on the left sidebar 
 
-## Back to Cognito User Pool:
+## Back to Cognito user pool:
 
 - Click on the "get" of the "GetSignInResult" and copy the "InvokeURL"
     - For example, mine is: https://6oit029inf.execute-api.us-west-2.amazonaws.com/test/getsigninresult
@@ -146,7 +146,7 @@ Note: We are only connecting 8/11 functions created above in our API.
     - Add a scope! I named mine "access" and "gdsfwe"
 - Check the resource created above inside the App Client Setting
 
-## Enabling Google Sign-on:
+## Enabling Google sign-on:
 
 - [How to set up](https://developers.google.com/identity/sign-in/web/sign-in)
     - Calling from "Web Browser/Application"
@@ -163,7 +163,7 @@ Note: We are only connecting 8/11 functions created above in our API.
 
 Note: You can check if this works by clicking on Hosted UI from App Client Setting. You should see an option for Google Sign In!
 
-## Finishing up Cognito User Pool:
+## Finishing up Cognito user pool:
 
 - Navigate to Triggers 
     - Pre Sign Up -> Select ValidateDuplicateEmail
@@ -179,7 +179,7 @@ Note: You can check if this works by clicking on Hosted UI from App Client Setti
         - OAuth Scope: $(NAME_OF_API_FROM_COGNITO)
             - Ex. arnoc.api/access
 
-## Setting Up Additional Tables:
+## Setting Up additional tables:
 *Setting up DynamoDB and Amazon SNS*
 
 - Create 2 tables, "MatchmakingTickets" and "Players" with the Partition Key: Id (String)
@@ -188,7 +188,7 @@ Note: You can check if this works by clicking on Hosted UI from App Client Setti
 
 - Set up defaults of Simple Notification Service (SNS)
 
-## Final Steps:
+## Final steps:
 *Setting up the connection from Game Engine to AWS Fleet Services and packing the final game!*
 
 - Navigate to your game folder -> Content
@@ -202,7 +202,7 @@ Note: You can check if this works by clicking on Hosted UI from App Client Setti
         - This can be found through the Hosted UI from the App Settings of AWS Cognito. It is the URL of the Hosted UI.
     - RegionCode
         - Region code for the region of AWS GameLift
-    - [Example of Text Files]()
+    - [Example of Text Files](a9c1d02cb6ed6e9ad4a7ff9d2a052a8d.png)
 - Open up the Unreal Engine editor and package the game!
     - File -> Package Project -> Build Target -> GameLiftTutorial
     - File -> Package Project -> Win64
@@ -214,7 +214,7 @@ Note: You can check if this works by clicking on Hosted UI from App Client Setti
 - (Postman): A quick way to test your lambda functions/API calls
 - Note: You'll need to launch 2 instances at once for the matchmaking to work! WindowsNoEditor -> GameLiftTutorial.exe
 
-## Final Notes:
+## Final notes:
 
 How can we transition this example of a 3rd person multiplayer game for the capabilities of ARNOC_alpha? 
 
