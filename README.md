@@ -189,7 +189,9 @@ Note: You can check if this works by clicking on Hosted UI from App Client Setti
 
 ![Roadmap](./images/d83e46d2f8b0e36ee6b16a44582ccade.png?style=centerme)
 
-
+<p align="center">
+  <img width="460" height="300" src="./images/d83e46d2f8b0e36ee6b16a44582ccade.png">
+</p>
 
 
 
