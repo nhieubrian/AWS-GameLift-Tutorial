@@ -27,9 +27,9 @@ This tutorial is more linear, meaning you are creating the entire project from s
 ## Start up:
 *Guide to begin accessing the Test Project:*
 
-- Right click the GameLiftTutorial.uproject and generate the Visual Studios project.
-- Select Development Editor, Win64 and build the project.
-- This time select Development Server, Win64 and build again.
+- Right click the GameLiftTutorial.uproject and generate the Visual Studios project
+- Select Development Editor, Win64 and build the project
+- This time select Development Server, Win64 and build again
 - Launch the GameLiftTutorial.uproject (or rebuild the development editor)
 - On the top left, File -> Package Project -> Build Target -> GameLiftTutorialServer
 - Then package the project, File -> Package Project -> Win64 (can choose any build, just specify when uploading to AWS)
@@ -71,11 +71,11 @@ This tutorial is more linear, meaning you are creating the entire project from s
     - **EC2 Port Range:** 7777
         - Protocol: UDP
         - IP Address: 0.0.0.0/0
-    - Click Submit! This will take a couple of minutes to create.
+    - Click Submit! This will take a couple of minutes to create
 - Creating the **Queue:**
     - Choose any name
     - Down at the bottom, click add destination
-    - Select the region, Fleet, and the name of the Fleet we just created.
+    - Select the region, Fleet, and the name of the Fleet we just created
 - Creating the **Matchmaking:**
     - Navigate to "Create matchmaking rule set"
     - [Use the first example for rule set](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-examples.html)
@@ -83,7 +83,7 @@ This tutorial is more linear, meaning you are creating the entire project from s
     - Navigate to "Create matchmaking configuration"
         - Choose any name, leave everything as default
         - Request timeout: (Any number of seconds preffered, I had 60)
-        - Rule set name: (Select the rule set created above).
+        - Rule set name: (Select the rule set created above)
     - Click Create!
 
 ## Creating lambda functions:
@@ -199,7 +199,7 @@ Note: You can check if this works by clicking on Hosted UI from App Client Setti
     - CallbackUrl
         - This can be found in the App Settings of AWS Cognito
     - LoginUrl
-        - This can be found through the Hosted UI from the App Settings of AWS Cognito. It is the URL of the Hosted UI.
+        - This can be found through the Hosted UI from the App Settings of AWS Cognito. It is the URL of the Hosted UI
     - RegionCode
         - Region code for the region of AWS GameLift
     - ![Example of Text Files](./images/a9c1d02cb6ed6e9ad4a7ff9d2a052a8d.png)
