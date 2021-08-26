@@ -79,17 +79,17 @@
 ## Creating Lambda Functions:
 *Here we will create 11 different functions that we will connect together into a new API.*
 
-- InvalidateTokens (GET)* -L
-- GetSignInResult (GET)
-- RetrieveNewTokens (POST)* -L
-- ValidateDuplicateEmail -L
-- StartMatchmaking (POST)* -L
-- PollMatchmaking (POST)* -L
-- TrackEvents -L
-- StopMatchmaking (POST)* -L 
-- InitializePlayerData -L
-- ExchangeCodeForTokens (POST)
-- GetPlayerData (POST)* -L
+- **InvalidateTokens** (GET)* -L
+- **GetSignInResult** (GET)
+- **RetrieveNewTokens** (POST)* -L
+- **ValidateDuplicateEmail** -L
+- **StartMatchmaking** (POST)* -L
+- **PollMatchmaking** (POST)* -L
+- **TrackEvents** -L
+- **StopMatchmaking** (POST)* -L 
+- **InitializePlayerData** -L
+- **ExchangeCodeForTokens** (POST)
+- **GetPlayerData** (POST)* -L
 
 **All of the code for these functions will be in the "lambda" folder of this repo**
 
