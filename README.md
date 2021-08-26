@@ -211,7 +211,7 @@ Note: You can check if this works by clicking on Hosted UI from App Client Setti
 
 - Be sure to go back into your lamdba functions and 'edit' the necessary functions!
 - (Optional): Setting up CloudWatch for extra logs!
-- (Postman): A quick way to test your lambda functions/API calls
+- (Optional): Use Postman as a quick way to test your lambda functions/API calls
 - Note: You'll need to launch 2 instances at once for the matchmaking to work! WindowsNoEditor -> GameLiftTutorial.exe
 
 ## Final notes:
