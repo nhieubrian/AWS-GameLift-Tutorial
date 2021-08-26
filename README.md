@@ -202,7 +202,7 @@ Note: You can check if this works by clicking on Hosted UI from App Client Setti
         - This can be found through the Hosted UI from the App Settings of AWS Cognito. It is the URL of the Hosted UI.
     - RegionCode
         - Region code for the region of AWS GameLift
-    - ![Example of Text Files](a9c1d02cb6ed6e9ad4a7ff9d2a052a8d.png)
+    - ![Example of Text Files](./images/a9c1d02cb6ed6e9ad4a7ff9d2a052a8d.png)
 - Open up the Unreal Engine editor and package the game!
     - File -> Package Project -> Build Target -> GameLiftTutorial
     - File -> Package Project -> Win64
