@@ -104,7 +104,7 @@ Note: '-L' represents the need to create a layer before creating the function.
 In these functions, you will find sections where you will need to input the identification from the next sections.
 
 ## Setting up your Cognito User Pool:
-*This is how we track users and enable the Google Sign In**
+*This is how we track users and enable the Google Sign In*
 
 - Navigate: Manage User Pools -> Create User Pool -> $(NAME) -> Review Defaults -> Create Pool
 - Add an App Client 
@@ -144,7 +144,7 @@ Note: We are only connecting 8/11 functions created above in our API.
 
 ## Enabling Google Sign-on:
 
-- [How to set up] (https://developers.google.com/identity/sign-in/web/sign-in)
+- [How to set up](https://developers.google.com/identity/sign-in/web/sign-in)
     - Calling from "Web Browser/Application"
     - Authorized Javascript Origin: $(https://arnoctest.auth.us-west-2.amazoncognito.com)
         - This is found through the Domain Name section inside Cognito
