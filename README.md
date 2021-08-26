@@ -6,6 +6,10 @@
 
 This tutorial is more linear, meaning you are creating the entire project from scratch. Rather than continuing from the finished build in this repo.
 
+## Roadmap of the connection:
+
+![Roadmap](./images/d83e46d2f8b0e36ee6b16a44582ccade.png?style=centerme)
+
 ## Installation:
 
 - [How to install Unreal Engine Source](https://docs.unrealengine.com/4.27/en-US/ProgrammingAndScripting/ProgrammingWithCPP/DownloadingSourceCode/)
@@ -27,7 +31,7 @@ This tutorial is more linear, meaning you are creating the entire project from s
 - Select Development Editor, Win64 and build the project.
 - This time select Development Server, Win64 and build again.
 - Launch the GameLiftTutorial.uproject (or rebuild the development editor)
-- On the top left, File -> Package Project -> Build Target -> GameLiftTutorial
+- On the top left, File -> Package Project -> Build Target -> GameLiftTutorialServer
 - Then package the project, File -> Package Project -> Win64 (can choose any build, just specify when uploading to AWS)
 
 ## Uploading to AWS:
@@ -184,14 +188,51 @@ Note: You can check if this works by clicking on Hosted UI from App Client Setti
 
 - Set up defaults of Simple Notification Service (SNS)
 
+## Final Steps:
+*Setting up the connection from Game Engine to AWS Fleet Services and packing the final game!*
+
+- Navigate to your game folder -> Content
+- Create a new folder named Urls
+- You will now create 4 text files with the following names:
+    - ApiUrl
+        - The InvokeURL where we deployed the API in API Gateway
+    - CallbackUrl
+        - This can be found in the App Settings of AWS Cognito
+    - LoginUrl
+        - This can be found through the Hosted UI from the App Settings of AWS Cognito. It is the URL of the Hosted UI.
+    - RegionCode
+        - Region code for the region of AWS GameLift
+    - [Example of Text Files]()
+- Open up the Unreal Engine editor and package the game!
+    - File -> Package Project -> Build Target -> GameLiftTutorial
+    - File -> Package Project -> Win64
+
 ## Done!
 
 - Be sure to go back into your lamdba functions and 'edit' the necessary functions!
 - (Optional): Setting up CloudWatch for extra logs!
 - (Postman): A quick way to test your lambda functions/API calls
-- Note: You'll need to launch 2 instances at once for the matchmaking to work!
+- Note: You'll need to launch 2 instances at once for the matchmaking to work! WindowsNoEditor -> GameLiftTutorial.exe
 
-## Roadmap of the connection:
+## Final Notes:
 
-![Roadmap](./images/d83e46d2f8b0e36ee6b16a44582ccade.png?style=centerme)
+How can we transition this example of a 3rd person multiplayer game for the capabilities of ARNOC_alpha? 
+
+- Applying the steps from Google Oauth to CI Login:
+    - Other than having to make an account with Google, we connected Google OAuth to AWS's Cognito page
+    - However, we used a plugin called, "WebBrowserWidget", which allowed for the web browser aspect of this game. We were redirected to a login page where users were able to choose whether or not to use a Google Login.
+        - This widget can be used to redirect users to the CI login!
+- Other plugins:
+    - UMG
+    - SlateCore
+    - Http
+    - Json
+    - JsonUtilities
+
+## Next steps:
+
+- Upload the arnoc build, creating a fleet and queue!
+- Configuring a new matchmaking rule set that will allow for a non-team aspect 
+    - This was tried! But we need to edit the code for lambda or/and VS code
+    - Why? The results that we are getting are not matching with Lambda functions, so it is stopping!
 
