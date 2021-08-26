@@ -94,6 +94,7 @@
 **All of the code for these functions will be in the "lambda" folder of this repo**
 
 Note: '-L' represents the need to create a layer before creating the function. 
+
 In these functions, you will find sections where you will need to input the identification from the next sections.
 
 ## Setting up your Cognito User Pool:
